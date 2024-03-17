@@ -1,0 +1,233 @@
+@use 'variables';
+
+@mixin desktop-view ($width, $height: unset, $font-size: unset) {
+    @media (min-width: 1440px) {
+        width: $width;
+        height: $height;
+        font-size: $font-size;
+    }
+}
+
+
+
+@mixin sectio1-desktop() {
+    @media(min-width: 1440px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-image: url(../images/bg-curve-desktop.svg);
+    }
+}
+
+@mixin section1-enter() {
+    @media(min-width: 1440px) {
+        margin-left: 80px;
+    }
+}
+
+@mixin section1-tittle() {
+    @media(min-width: 1440px) {
+        margin: 0;
+        text-align: left;
+        margin-top: 90px;
+    }
+}
+
+@mixin section-1__description() {
+    @media(min-width: 1440px) {
+
+        text-align: left;
+        margin-top: 30px;
+    }
+}
+
+@mixin section-1__inputs() {
+    @media(min-width: 1440px) {
+        display: flex;
+        width: 535px;
+        justify-content: space-between;
+    }
+}
+
+@mixin section-1__emails() {
+    @media(min-width: 1440px) {
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+}
+
+@mixin section-1__button() {
+    @media(min-width: 1440px) {
+        margin-top: 25px;
+    }
+}
+
+
+@mixin section2-desktop() {
+    @media(min-width: 1440px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+@mixin section2-desktop__card() {
+    @media(min-width: 1440px) {
+        margin: 40px 0;
+    }
+}
+
+
+@mixin section2-desktop__quotes() {
+    @media(min-width: 1440px) {
+        margin: 35px 0 0 35px;
+    }
+}
+
+@mixin section-2__sentence() {
+    width: 315px;
+    margin-left: 30px;
+    font-size: 0.85em;
+    color: variables.$Desaturated-Blue;
+}
+
+
+@mixin section-2__B() {
+    @media(min-width: 1440px) {
+        display: flex;
+        flex-direction: column;
+        padding-left: 75px;
+        width: 735px;
+    }
+
+}
+
+@mixin section2-tittle() {
+    @media(min-width: 1440px) {
+        margin: 0;
+        text-align: left;
+        margin-top: 38px;
+        width: 656px;
+        padding-top: 0;
+    }
+}
+
+@mixin section2-p {
+    @media(min-width: 1440px) {
+        margin-left: 0;
+    }
+}
+
+@mixin section2-link {
+    @media(min-width: 1440px) {
+        margin: 20px 0 0;
+    }
+}
+
+@mixin section2-line {
+    @media(min-width: 1440px) {
+        margin: 5px 0;
+    }
+}
+
+
+@mixin section2-desktop__ceo {
+    @media(min-width: 1440px) {
+        margin-left: 40px;
+    }
+}
+
+
+@mixin section3-desktop() {
+    @media(min-width: 1440px) {
+        display: flex;
+    }
+}
+
+@mixin section3-desktop__description() {
+    @media(min-width: 1440px) {
+        margin-left: 80px;
+    }
+}
+
+@mixin section3-desktop__description__tittle() {
+    @media(min-width: 1440px) {
+        margin-top: 70px;
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+@mixin section3-desktop__description__text() {
+    @media(min-width: 1440px) {
+        text-align: left;
+        margin-top: 30px;
+        line-height: 25px;
+    }
+}
+
+@mixin section3-desktop__buttons() {
+    @media(min-width: 1440px) {
+        margin-left: 240px;
+    }
+}
+
+@mixin section3-desktop__buttons__input() {
+    @media(min-width: 1440px) {
+        margin-top: 70px;
+    }
+}
+
+@mixin section3-desktop__buttons__start() {
+    @media(min-width: 1440px) {
+        margin: 14px 0 0 0;
+    }
+}
+
+@mixin footer-desktop () {
+    @media(min-width: 1440px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@mixin footer-desktop__contact() {
+    @media(min-width: 1440px) {
+        margin: 100px 0 0 80px;
+    }
+}
+
+
+@mixin footer-desktop__logo() {
+    @media(min-width: 1440px) {
+        margin: 0;
+    }
+}
+
+@mixin footer-desktop__phone() {
+    @media(min-width: 1440px) {
+        margin: 20px 0 0;
+    }
+}
+
+@mixin footer-desktop__email() {
+    @media(min-width: 1440px) {
+        margin: 20px 0 0;
+    }
+}
+
+@mixin footer-desktop__lists($margin-left, $line-heigt) {
+    @media(min-width: 1440px) {
+        margin: 0;
+        line-height: $line-heigt;
+        margin-top: 185px;
+        margin-left: $margin-left;
+    }
+}
+
+@mixin footer-desktop__social() {
+    @media(min-width: 1440px) {
+        margin-top: 185px;
+        margin: 185px 0 0 180px;
+    }
+}

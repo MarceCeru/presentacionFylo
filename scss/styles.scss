@@ -1,0 +1,456 @@
+@use 'variables';
+@use 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: variables.$body-font;
+
+}
+
+.main-container {
+    width: 375px;
+    //  border: 1px solid red;
+    margin: 0 auto 0;
+    @include mixins.desktop-view(1440px);
+
+}
+
+.nav-bar {
+    display: flex;
+    width: 325px;
+    margin: 50px auto;
+    justify-content: space-between;
+
+    &__logo {
+        height: 25px;
+        @include mixins.desktop-view(165px, 50px);
+
+    }
+
+    &__options {
+        display: flex;
+        width: 165px;
+        justify-content: space-between;
+        align-self: center;
+        font-size: 0.8em;
+        color: variables.$Very-Dark-Blue;
+        @include mixins.desktop-view(277px, unset, 0.9em);
+    }
+
+    @include mixins.desktop-view(1280px);
+
+}
+
+;
+
+.section-1 {
+    margin-top: 100px;
+    @include mixins.sectio1-desktop();
+    @include mixins.desktop-view(1440px, 700px);
+    height: 733px;
+    background-image: url("../images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+
+    &__enter {
+        @include mixins.section1-enter();
+    }
+
+
+
+    &__image {
+        width: 325px;
+        margin-left: 25px;
+        @include mixins.desktop-view(540px, 410px);
+    }
+
+    &__enter {
+        @include mixins.desktop-view(585px);
+    }
+
+
+    &__tittle {
+        margin: 50px auto 33px;
+        width: 315px;
+        text-align: center;
+        font-size: 1.45em;
+        @include mixins.desktop-view(585px, 95px, 2.4em);
+        @include mixins.section1-tittle;
+    }
+
+    &__description {
+        width: 285px;
+        text-align: center;
+        margin: auto;
+        font-size: 0.85em;
+        font-weight: 500;
+        line-height: 22px;
+        color: variables.$Very-Dark-Blue;
+        @include mixins.desktop-view(585px, unset, 1.1em);
+        @include mixins.section-1__description()
+    }
+
+    &__inputs {
+        @include mixins.section-1__inputs();
+    }
+
+    &__email {
+        width: 305px;
+        height: 40px;
+        margin-left: 35px;
+        margin-top: 30px;
+        border-radius: 5px;
+        font-size: 0.8em;
+        padding-left: 25px;
+        @include mixins.desktop-view(317px, 45px, 0.9em);
+        @include mixins.section-1__emails();
+    }
+
+    &__button {
+        margin-top: 15px;
+        width: 305px;
+        height: 40px;
+        margin-left: 35px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 600;
+        background-color: variables.$Bright-Blue;
+        color: white;
+        cursor: pointer;
+        @include mixins.desktop-view(200px, 45px, 0.9em);
+        @include mixins.section-1__button();
+    }
+
+    &__button:hover {
+        background-color: rgb(37, 126, 171);
+    }
+
+}
+
+.section-2 {
+    background-color: variables.$Light-Grayish-Blue;
+    border: 1px solid rgb(249, 242, 242);
+    @include mixins.section2-desktop();
+    @include mixins.desktop-view(1440px);
+
+
+    &__image {
+        width: 325px;
+        margin-left: 25px;
+        margin-right: 75px;
+        margin-top: 120px;
+        @include mixins.desktop-view(540px, 410PX);
+    }
+
+    &__B {
+        @include mixins.desktop-view(655px);
+        @include mixins.section-2__B();
+    }
+
+    &__tittle {
+        width: 265px;
+        font-size: 0.96em;
+        margin: 90px auto 0px;
+        @include mixins.desktop-view(655px, unset, 2.385em);
+        @include mixins.section2-tittle();
+    }
+
+    &__p1 {
+        margin-top: 27.5px;
+        @include mixins.section-2__sentence();
+        @include mixins.desktop-view(520px, 40px);
+        @include mixins.section2-p();
+    }
+
+    &__p2 {
+        margin-top: 22.5px;
+        @include mixins.section-2__sentence();
+        @include mixins.desktop-view(520px, 40px);
+        @include mixins.section2-p();
+    }
+
+    &__link {
+        //    border: 1px solid orange;
+        display: flex;
+        width: 130px;
+        margin-left: 122.5px;
+        height: 13px;
+        margin-top: 42px;
+        align-items: center;
+        cursor: pointer;
+        @include mixins.section2-link();
+        @include mixins.desktop-view(165px);
+    }
+
+    &__howWork {
+        color: variables.$Moderate-Cyan;
+        width: 110px;
+        font-size: 0.68em;
+        @include mixins.desktop-view(144px, unset, 0.92em);
+    }
+
+    &__howWork:hover {
+        color: rgb(83, 174, 174);
+    }
+
+    &__line {
+        border: 1px solid variables.$Moderate-Cyan;
+        width: 130px;
+        margin: 14px auto 0;
+        @include mixins.section2-line();
+        @include mixins.desktop-view(156px);
+    }
+
+    &__card {
+        margin: 40px auto 80px;
+        width: 280px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px -5px;
+        padding-bottom: 1px;
+        background-color: white;
+        @include mixins.desktop-view(355px, 214px);
+        @include mixins.section2-desktop__card();
+
+        &__quotes {
+            width: 14px;
+            margin: 22px 22px 0;
+            color: variables.$Very-Dark-Blue;
+            @include mixins.section2-desktop__quotes();
+        }
+
+        &__description {
+            width: 240px;
+            margin: 13px auto 0;
+            font-size: 0.67em;
+            color: variables.$Very-Dark-Blue;
+            @include mixins.desktop-view(280px, 83px, 00.85em);
+        }
+
+        &__ceo {
+            display: flex;
+            width: 105px;
+            height: 24px;
+            margin: 18px 22px 20px;
+            @include mixins.desktop-view(135px, 30px);
+            @include mixins.section2-desktop__ceo();
+
+            &__photo {
+                border-radius: 50%;
+                width: 24px;
+                @include mixins.desktop-view(30px, 30px);
+            }
+
+            &__date {
+                font-size: 0.41em;
+                margin-left: 6px;
+                color: variables.$Very-Dark-Blue;
+                line-height: 13px;
+                @include mixins.desktop-view(100px, unset, 0.56em);
+
+                &__name {
+                    font-weight: 700;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+.section-3 {
+    height: 345px;
+    background-color: variables.$Desaturated-Blue;
+    border: 1px solid rgb(41, 37, 29);
+    @include mixins.desktop-view(1440px, 320px);
+    @include mixins.section3-desktop();
+
+    &__description {
+        @include mixins.desktop-view(520px);
+        @include mixins.section3-desktop__description();
+
+        &__tittle {
+            width: 195px;
+            font-size: 1.08em;
+            margin: 58px auto 0;
+            color: white;
+            @include mixins.desktop-view(350px, 36px, 1.95em);
+            @include mixins.section3-desktop__description__tittle();
+        }
+
+        &__text {
+            width: 265px;
+            margin: 25px auto 0;
+            font-size: 0.8em;
+            font-weight: 300;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            @include mixins.desktop-view(520px, 70px, 1.1em);
+            @include mixins.section3-desktop__description__text()
+        }
+
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        @include mixins.section3-desktop__buttons();
+        @include mixins.desktop-view(480px);
+
+
+        &__input {
+            width: 233px;
+            height: 32px;
+            margin: 28px auto 0;
+            border: none;
+            border-radius: 2px;
+            @include mixins.desktop-view(480px, 50px);
+            @include mixins.section3-desktop__buttons__input();
+        }
+
+        &__start {
+            width: 233px;
+            height: 32px;
+            margin: 8px auto 66px;
+            background-color: variables.$Bright-Blue;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            @include mixins.desktop-view(200px, 50px);
+            @include mixins.section3-desktop__buttons__start();
+        }
+
+        &__start:hover {
+            background-color: rgb(37, 126, 171);
+        }
+    }
+
+}
+
+.footer {
+    background-color: variables.$Very-Dark-Blue;
+    display: flex;
+    flex-direction: column;
+    @include mixins.desktop-view(1440px, 390px);
+    @include mixins.footer-desktop ();
+
+    &__contact {
+        @include mixins.desktop-view(220px, 140px);
+        @include mixins.footer-desktop__contact();
+
+        &__logo {
+            filter: brightness(0) invert(1);
+            width: 175px;
+            height: 50px;
+            margin: 60px 0 0 37.5px;
+            @include mixins.desktop-view(175px, 50px);
+            @include mixins.footer-desktop__logo();
+        }
+
+        &__phone {
+            display: flex;
+            color: white;
+            margin: 44px 0 20px 37.5px;
+            @include mixins.desktop-view(220px);
+            @include mixins.footer-desktop__phone();
+
+            &__number {
+                margin-left: 17px;
+            }
+        }
+
+
+        &__email {
+            display: flex;
+            color: white;
+            margin-left: 37.5px;
+            @include mixins.desktop-view(35px);
+            @include mixins.footer-desktop__email();
+
+            &__example-email {
+                margin-left: 15px;
+            }
+
+        }
+    }
+
+    &__list-1 {
+        color: white;
+        margin: 64px 0 0 37.5px;
+        line-height: 40px;
+        @include mixins.desktop-view(70px, 135px);
+        @include mixins.footer-desktop__lists(215px, 28px);
+
+        &__options{
+            cursor: pointer;
+        }
+
+        &__options:hover{
+            color: variables.$Desaturated-Blue;
+        }
+    }
+
+
+    &__list-2 {
+        //  border: 1px solid white;
+        color: white;
+        margin: 55px 0 0 37.5px;
+        line-height: 40px;
+        @include mixins.desktop-view(85px, 95px);
+        @include mixins.footer-desktop__lists(215px, 35px);
+
+        &__options{
+            cursor: pointer;
+        }
+
+        &__options:hover{
+            color: variables.$Desaturated-Blue;
+        }
+    }
+
+    &__social {
+        color: white;
+        margin: 50px auto 45px;
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        @include mixins.desktop-view(120px, 30px);
+        @include mixins.footer-desktop__social();
+    }
+
+}
+
+#social {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 25px;
+    align-items: center;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover{
+            color: variables.$Desaturated-Blue;
+            border-color:variables.$Desaturated-Blue;
+    }
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
